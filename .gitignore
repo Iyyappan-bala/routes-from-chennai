@@ -11,5 +11,9 @@ Thumbs.db
 .env.*
 !.env.example
 
-# Unverified photographs - do not publish until reuse rights are confirmed
+# Unresolved-provenance images stay blocked by default; only the three
+# approved project images below are allowed through this rule.
 *.webp
+!images/marina-beach.webp
+!images/meenakshi-temple.webp
+!images/brihadeeswarar-temple.webp
