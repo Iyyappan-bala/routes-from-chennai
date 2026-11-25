@@ -170,8 +170,39 @@ main { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--space-3);
   background-color: var(--color-navy);
   color: var(--color-sandstone);
   text-align: center;
-  padding: var(--space-3);
-  font-size: 0.85rem;
+  padding: var(--space-5) var(--space-3);
+}
+.footer-inner { max-width: 40ch; margin: 0 auto; }
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-ivory);
+  margin: 0 0 var(--space-1);
+}
+.footer-tagline {
+  font-style: italic;
+  color: var(--color-sandstone);
+  margin: 0 0 var(--space-3);
+}
+.footer-credit {
+  color: var(--color-ivory);
+  font-weight: 600;
+  margin: 0 0 var(--space-1);
+  transition: color var(--motion-duration) var(--motion-ease);
+}
+.footer-inner:hover .footer-credit { color: var(--color-terracotta); }
+.footer-course, .footer-copyright {
+  font-size: 0.8rem;
+  color: var(--color-sandstone);
+  opacity: 0.8;
+  margin: 0 0 var(--space-1);
+}
+.footer-copyright { margin-bottom: 0; }
+
+.credits-intro {
+  max-width: 60ch;
+  opacity: 0.85;
+  margin: 0 0 var(--space-3);
 }
 
 @media (max-width: 900px) {
