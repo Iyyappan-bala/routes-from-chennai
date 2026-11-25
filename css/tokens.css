@@ -1,0 +1,50 @@
+/* Routes From Chennai — design tokens
+   Shared by homepage.css and travel-stories.css. */
+
+:root {
+  /* Palette (approved: ivory / navy / terracotta / green / sandstone) */
+  --color-ivory: #FAF6EE;
+  --color-ivory-dim: #F1EBDD;
+  --color-navy: #1B2A4A;
+  --color-navy-soft: rgba(27, 42, 74, 0.08);
+  --color-terracotta: #C1603A;
+  --color-green: #6B8F71;
+  --color-sandstone: #D8C3A5;
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+
+  --font-size-display: clamp(2.5rem, 4vw + 1rem, 5rem);
+  --font-size-h2: clamp(1.8rem, 2.4vw + 1rem, 3rem);
+  --font-size-h3: clamp(1.3rem, 1.2vw + 1rem, 1.75rem);
+  --font-size-body: clamp(1rem, 0.3vw + 0.9rem, 1.125rem);
+  --font-size-small: 0.875rem;
+
+  --line-height-display: 1.1;
+  --line-height-body: 1.7;
+
+  /* Spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+  --space-7: 9rem;
+
+  /* Layout */
+  --content-max: 1180px;
+  --radius: 4px;
+
+  /* Motion */
+  --motion-duration: 0.5s;
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration: 0.001s;
+  }
+}

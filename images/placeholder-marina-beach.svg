@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">Illustrative placeholder: Marina Beach, Chennai</title>
+  <desc id="desc1">Stylised editorial illustration standing in for a photograph of Marina Beach until a licensed photo is added.</desc>
+  <rect width="400" height="260" fill="#FAF6EE"/>
+  <rect y="150" width="400" height="110" fill="#D8C3A5"/>
+  <path d="M0 150 Q100 120 200 150 T400 150 V170 Q300 145 200 170 T0 170 Z" fill="#6B8F71" opacity="0.6"/>
+  <rect y="190" width="400" height="70" fill="#1B2A4A" opacity="0.08"/>
+  <circle cx="340" cy="50" r="28" fill="#C1603A" opacity="0.85"/>
+  <text x="200" y="230" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#1B2A4A">Marina Beach — placeholder illustration</text>
+</svg>

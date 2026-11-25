@@ -1,0 +1,187 @@
+/* Routes From Chennai — travel-stories.css (editorial redesign)
+   Tokens defined in tokens.css */
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ivory);
+  color: var(--color-navy);
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
+  font-size: var(--font-size-body);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--color-navy);
+  color: var(--color-ivory);
+  padding: 0.75rem 1.25rem;
+  z-index: 100;
+}
+.skip-link:focus { left: var(--space-2); top: var(--space-2); }
+
+h1, h2 { font-family: var(--font-display); line-height: var(--line-height-display); margin: 0 0 var(--space-2); }
+
+a { color: var(--color-terracotta); }
+a:focus-visible { outline: 3px solid var(--color-terracotta); outline-offset: 3px; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-navy);
+  color: var(--color-ivory);
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  transition: box-shadow var(--motion-duration) var(--motion-ease);
+}
+.site-header.is-scrolled { box-shadow: 0 4px 14px rgba(0,0,0,0.25); }
+
+.header-inner { display: flex; align-items: baseline; gap: var(--space-2); }
+.masthead-eyebrow { text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.7rem; color: var(--color-sandstone); margin: 0; }
+.masthead-title { font-family: var(--font-display); font-size: 1.35rem; margin: 0; }
+
+.main-nav ul { list-style: none; display: flex; gap: var(--space-3); margin: 0; padding: 0; font-size: 0.9rem; }
+.main-nav a { color: var(--color-ivory); text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 2px; }
+.main-nav a:hover, .main-nav a:focus-visible { border-bottom-color: var(--color-terracotta); }
+.main-nav a[aria-current="page"] { border-bottom-color: var(--color-sandstone); }
+
+main { max-width: var(--content-max); margin: 0 auto; padding: 0 var(--space-3); }
+
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--motion-duration) var(--motion-ease), transform var(--motion-duration) var(--motion-ease);
+}
+.js-reveal-ready .reveal { opacity: 0; transform: translateY(24px); }
+.js-reveal-ready .reveal.is-visible { opacity: 1; transform: none; }
+
+.stories-intro { max-width: 60ch; padding: var(--space-6) 0 var(--space-4); }
+.stories-intro h1 { font-size: var(--font-size-display); }
+.stories-lede { font-size: 1.1rem; }
+
+.destination-table-section { padding: var(--space-4) 0; border-top: 1px solid var(--color-sandstone); }
+.destination-table-section h2 { font-size: var(--font-size-h2); }
+
+.destination-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-terracotta);
+  margin: var(--space-2) 0 var(--space-1);
+}
+.destination-table caption {
+  caption-side: top;
+  text-align: left;
+  font-style: italic;
+  margin-bottom: var(--space-1);
+  color: var(--color-navy);
+}
+.destination-table th, .destination-table td {
+  border: 1px solid var(--color-sandstone);
+  padding: var(--space-2) var(--space-2);
+  text-align: left;
+}
+.destination-table thead th {
+  background-color: var(--color-navy);
+  color: var(--color-ivory);
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+.destination-table tbody tr:nth-child(odd) { background-color: var(--color-ivory); }
+.destination-table tbody tr:nth-child(even) { background-color: var(--color-ivory-dim); }
+.destination-table tbody tr:hover { background-color: var(--color-sandstone); }
+
+.table-thumb {
+  width: 110px;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  opacity: 0.9;
+  transition: opacity var(--motion-duration) var(--motion-ease), transform var(--motion-duration) var(--motion-ease);
+}
+.table-thumb:hover, .table-thumb:focus-visible { opacity: 1; transform: scale(1.04); }
+
+.image-note { font-size: var(--font-size-small); color: var(--color-navy); opacity: 0.8; }
+
+.destination-articles { padding: var(--space-5) 0; }
+.destination-article {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-5) 0;
+  border-top: 1px dashed var(--color-sandstone);
+}
+.destination-article:nth-child(even) { direction: rtl; }
+.destination-article:nth-child(even) > * { direction: ltr; }
+
+.destination-article h2 { font-size: var(--font-size-h2); color: var(--color-navy); }
+.article-image {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.credits {
+  padding: var(--space-4) 0 var(--space-5);
+  border-top: 1px solid var(--color-sandstone);
+  font-size: 0.85rem;
+  color: var(--color-navy);
+}
+.credits h2 {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-terracotta);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+.credits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-2) var(--space-4);
+  margin: 0 0 var(--space-2);
+}
+.credits-item { margin: 0; }
+.credits-item dt { font-weight: 600; }
+.credits-item dd { margin: 0; opacity: 0.75; }
+.credits-note {
+  max-width: 70ch;
+  opacity: 0.65;
+  font-size: 0.8rem;
+}
+
+.site-footer {
+  background-color: var(--color-navy);
+  color: var(--color-sandstone);
+  text-align: center;
+  padding: var(--space-3);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .destination-article { grid-template-columns: 1fr; direction: ltr !important; }
+  .destination-article > * { direction: ltr !important; }
+  .article-image { height: 240px; }
+}
+
+@media (max-width: 600px) {
+  .masthead-title { font-size: 1.1rem; }
+  .table-thumb { width: 72px; }
+  .destination-table th, .destination-table td { padding: 0.5rem 0.6rem; font-size: 0.9rem; }
+}

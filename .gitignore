@@ -1,0 +1,15 @@
+﻿# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local AI/editor configuration
+.claude/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Unverified photographs - do not publish until reuse rights are confirmed
+*.webp

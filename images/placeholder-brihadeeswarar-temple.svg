@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="title3 desc3">
+  <title id="title3">Illustrative placeholder: Brihadeeswarar Temple, Thanjavur</title>
+  <desc id="desc3">Stylised editorial illustration standing in for a photograph of the Chola-era temple tower until a licensed photo is added.</desc>
+  <rect width="400" height="260" fill="#FAF6EE"/>
+  <polygon points="200,15 150,210 250,210" fill="#6B8F71" opacity="0.85"/>
+  <polygon points="200,15 170,210 230,210" fill="#1B2A4A" opacity="0.15"/>
+  <rect x="120" y="210" width="160" height="30" fill="#D8C3A5"/>
+  <text x="200" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#1B2A4A">Brihadeeswarar Temple — placeholder illustration</text>
+</svg>
